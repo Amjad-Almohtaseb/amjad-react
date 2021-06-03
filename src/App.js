@@ -1,13 +1,16 @@
-import "./App.css";
+//import "./App.css";
 import Home from "./components/Home.js";
-import Electronicshop from "./components/Electronicshop";
+import Electronicshoplist from "./components/Electronicshoplist";
+import { ThemeProvider } from "styled-components";
+import { theme, GlobalStyle } from "./styles";
 
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Home />
-      <Electronicshop />
-    </div>
+      <Electronicshoplist />
+    </ThemeProvider>
   );
 }
 
